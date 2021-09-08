@@ -312,8 +312,8 @@ fn draw_skills(t: &mut Terminal<RawBackend>, area: &Rect) {
                             .fg(Color::Magenta)
                             .bg(Color::Black)
                             .modifier(Modifier::Italic))
-                    .label(&format!("60 / 100"))
-                    .percent(60)
+                    .label(&format!("80 / 100"))
+                    .percent(80)
                     .render(t, &chunks[3]);
             });
             Block::default()
@@ -370,23 +370,23 @@ fn draw_skills(t: &mut Terminal<RawBackend>, area: &Rect) {
                         .render(t, &chunks[1]);
                     SelectableList::default()
                         .block(Block::default().borders(Borders::ALL).title("Languages").title_style(Style::default().fg(Color::Yellow).modifier(Modifier::Bold)))
-                        .items(&vec!["Bash", "", "Python", "", "Lua"])
+                        .items(&vec!["Bash", "", "HCL", "", "Python", "", "Go"])
                         .render(t, &chunks[3]);
                     SelectableList::default()
                         .block(Block::default().borders(Borders::ALL).title("CI/CD").title_style(Style::default().fg(Color::Yellow).modifier(Modifier::Bold)))
-                        .items(&vec!["Gitlab CI", "", "Git Runner"])
+                        .items(&vec!["Gitlab CI", "", "Git Runner", "", "CodeCommit", "", "CodeBuild"])
                         .render(t, &chunks[5]);
                     SelectableList::default()
                         .block(Block::default().borders(Borders::ALL).title("Monitoring").title_style(Style::default().fg(Color::Yellow).modifier(Modifier::Bold)))
-                        .items(&vec!["CloudWatch"])
+                        .items(&vec!["CloudWatch", "", "Grafana", "", "Prometheus", "","FluentBit", "", "Kibana"])
                         .render(t, &chunks[7]);
                     SelectableList::default()
-                        .block(Block::default().borders(Borders::ALL).title("Databases").title_style(Style::default().fg(Color::Yellow).modifier(Modifier::Bold)))
-                        .items(&vec!["RDS", "", "MySQL", "", "Aurora"])
+                        .block(Block::default().borders(Borders::ALL).title("Storage").title_style(Style::default().fg(Color::Yellow).modifier(Modifier::Bold)))
+                        .items(&vec!["RDS", "", "MySQL", "", "Aurora", "", "K8s Persistence"])
                         .render(t, &chunks[9]);
                     SelectableList::default()
                         .block(Block::default().borders(Borders::ALL).title("IDE").title_style(Style::default().fg(Color::Yellow).modifier(Modifier::Bold)))
-                        .items(&vec!["InteliJ", "", "Docker Hub", "", "JIRA", "", "Atlassian"])
+                        .items(&vec!["Visual SC", "", "InteliJ", "", "Docker Hub", "", "JIRA", "", "Atlassian"])
                         .render(t, &chunks[11]);
                     SelectableList::default()
                         .block(Block::default().borders(Borders::ALL).title("Honors").title_style(Style::default().fg(Color::Yellow).modifier(Modifier::Bold)))
@@ -404,7 +404,7 @@ fn draw_experience(t: &mut Terminal<RawBackend>, area: &Rect) {
                 Paragraph::default()
                 .block(Block::default()
                     .borders(Borders::ALL)
-                    .title("2019 - 2020: DevOps Engineer at Appon GmbH / d.o.o.")
+                    .title("2019 - NOW: DevOps Engineer @ Appon GmbH, @ Minus5 d.o.o.")
                     .title_style(Style::default().fg(Color::Green).modifier(Modifier::Bold)))
                 .wrap(true)
                 .text("\n{mod=bold;fg=yellow Organisation:} Spiking technologies and resolve impediments as Scrum Master.\n Designing and Building Infrastructures as Code by implementing Best 'Practices' and automated Build/Test/Deploy (CICD).\n\n\
